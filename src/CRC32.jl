@@ -28,4 +28,6 @@ function crc32(data::Vector{Uint8}, crc::Integer=0)
 	~crc
 end
 
+crc32(data::String, crc::Integer=0) = crc32(convert(Vector{Uint8}, data), crc)
+
 end # module
