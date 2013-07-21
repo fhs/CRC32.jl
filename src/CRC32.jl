@@ -1,0 +1,31 @@
+module CRC32
+
+export crc32
+
+function maketable(poly::Uint32)
+	tab = zeros(Uint32, 256)
+	for i in 0:255
+		crc = convert(Uint32, i)
+		for _ in 1:8
+			if (crc&1) == 1
+				crc = (crc >> 1) $ poly
+			else
+				crc >>= 1
+			end
+		end
+		tab[i+1] = crc
+	end
+	tab
+end
+
+table = maketable(0xedb88320)
+
+function crc32(data::Vector{Uint8}, crc::Integer=0)
+	crc = ~convert(Uint32, crc)
+	for b in data
+		crc = table[(convert(Uint8, crc) $ b) + 1] $ (crc >> 8)
+	end
+	~crc
+end
+
+end # module
