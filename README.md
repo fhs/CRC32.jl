@@ -1,10 +1,12 @@
-CRC32.jl: 32-bit cyclic redundancy check (CRC-32) checksum implementation for Julia
-===================================================================================
+## Overview
 
 See http://en.wikipedia.org/wiki/Cyclic_redundancy_check for more information.
 
-Usage
------
+## Installation
+
+Install via the Julia package manager, `Pkg.add("CRC32")`.
+
+## Usage
 
 ```julia
 julia> using CRC32
