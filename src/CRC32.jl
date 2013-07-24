@@ -18,7 +18,7 @@ function maketable(poly::Uint32)
 	tab
 end
 
-table = maketable(0xedb88320)
+const table = maketable(0xedb88320)
 
 function crc32(data::Vector{Uint8}, crc::Integer=0)
 	crc = ~uint32(crc)
