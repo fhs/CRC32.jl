@@ -2,6 +2,8 @@
 
 See http://en.wikipedia.org/wiki/Cyclic_redundancy_check for more information.
 
+[![Build Status](https://travis-ci.org/fhs/CRC32.jl.png)](https://travis-ci.org/fhs/CRC32.jl)
+
 ## Installation
 
 Install via the Julia package manager, `Pkg.add("CRC32")`.
