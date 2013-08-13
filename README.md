@@ -1,8 +1,14 @@
+[![Build Status](https://travis-ci.org/fhs/CRC32.jl.png)](https://travis-ci.org/fhs/CRC32.jl)
+
 ## Overview
 
 See http://en.wikipedia.org/wiki/Cyclic_redundancy_check for more information.
 
-[![Build Status](https://travis-ci.org/fhs/CRC32.jl.png)](https://travis-ci.org/fhs/CRC32.jl)
+**If you're looking for a fast CRC32 function and don't mind depending on libz,
+you should use the crc32 function in [Zlib package](https://github.com/dcjones/Zlib.jl).
+Current benchmark shows Zlib crc32 is about 26
+times faster than crc32 in this package.**
+
 
 ## Installation
 
