@@ -4,11 +4,9 @@
 
 See http://en.wikipedia.org/wiki/Cyclic_redundancy_check for more information.
 
-**If you're looking for a fast CRC32 function and don't mind depending on libz,
-you should use the crc32 function in [Zlib package](https://github.com/dcjones/Zlib.jl).
-Current benchmark shows Zlib crc32 is about 26
-times faster than crc32 in this package.**
-
+**This package is deprecated.** Please use the CRC32 implementation in any of the following libraries:
+- [Zlib.jl](https://github.com/dcjones/Zlib.jl) -- depends on zlib but about 26x faster
+- [CRC.jl](https://github.com/andrewcooke/CRC.jl) -- written in pure Julia and is comparable in speed to Zlib.jl
 
 ## Installation
 
