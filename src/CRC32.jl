@@ -22,13 +22,13 @@ end
 
 const table = maketable(0xedb88320)
 
-function crc32(data::Vector{UInt8}, crc::Integer=0)
-	crc = ~@compat UInt32(crc)
+function crc32(data::Vector{UInt8}, crc::UInt32=@compat(UInt32(0)))
 	for b in data
 		crc = table[(@compat UInt8(crc&0xff) $ b) + 1] $ (crc >> 8)
 	end
 	~crc
 end
+crc32(data, crc::Integer) = crc32(data, @compat UInt32(crc))
 
 crc32(data::String, crc::Integer=0) = crc32(convert(Vector{UInt8}, data), crc)
 
