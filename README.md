@@ -5,8 +5,9 @@
 See http://en.wikipedia.org/wiki/Cyclic_redundancy_check for more information.
 
 **This package is deprecated.** Please use the CRC32 implementation in any of the following libraries:
-- [Zlib.jl](https://github.com/dcjones/Zlib.jl) -- depends on zlib but about 26x faster
-- [CRC.jl](https://github.com/andrewcooke/CRC.jl) -- written in pure Julia and is comparable in speed to Zlib.jl
+- [CRC32.jl](https://github.com/JuliaIO/CRC32.jl) -- interface to the optimized CRC-32 implementation in Zlib
+- [CRC.jl](https://github.com/andrewcooke/CRC.jl) -- written in pure Julia, supports many CRC variants, and is comparable in speed to zlib
+- [CRC32c standard library](https://docs.julialang.org/en/v1/stdlib/CRC32c/) -- highly optimized implementation of the closely related CRC-32c checksum
 
 ## Installation
 
