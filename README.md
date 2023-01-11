@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.org/fhs/CRC32.jl.png)](https://travis-ci.org/fhs/CRC32.jl)
-
 ## Overview
 
 See http://en.wikipedia.org/wiki/Cyclic_redundancy_check for more information.
@@ -8,10 +6,6 @@ See http://en.wikipedia.org/wiki/Cyclic_redundancy_check for more information.
 - [CRC32.jl](https://github.com/JuliaIO/CRC32.jl) -- interface to the optimized CRC-32 implementation in Zlib
 - [CRC.jl](https://github.com/andrewcooke/CRC.jl) -- written in pure Julia, supports many CRC variants
 - [CRC32c standard library](https://docs.julialang.org/en/v1/stdlib/CRC32c/) -- highly optimized implementation of the closely related CRC-32c checksum
-
-## Installation
-
-Install via the Julia package manager, `Pkg.add("CRC32")`.
 
 ## Usage
 
