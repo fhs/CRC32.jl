@@ -20,13 +20,15 @@ end
 
 const table = maketable(0xedb88320)
 
-function crc32(data::AbstractVector{UInt8}, crc_::Integer=0)
-	crc = ~UInt32(crc_)
-	for b in data
-		crc = table[(UInt8(crc&0xff) ⊻ b) + 1] ⊻ (crc >> 8)
+function crc32(data::AbstractVector{UInt8}, crc::UInt32=UInt32(0))
+	crc = ~crc
+	@inbounds for b in data
+		crc = table[(((crc&0xff) % UInt8) ⊻ b) + 1] ⊻ (crc >> 8)
 	end
 	~crc
 end
+
+crc32(data, crc::Integer) = crc32(data, UInt32(crc))
 
 crc32(data::AbstractString, crc::Integer=0) = crc32(codeunits(data), crc)
 
