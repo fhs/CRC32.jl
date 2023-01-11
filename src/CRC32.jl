@@ -23,7 +23,7 @@ const table = maketable(0xedb88320)
 function crc32(data::AbstractVector{UInt8}, crc::UInt32=UInt32(0))
 	crc = ~crc
 	@inbounds for b in data
-		crc = table[(((crc&0xff) % UInt8) ⊻ b) + 1] ⊻ (crc >> 8)
+		crc = table[((crc % UInt8) ⊻ b) + 1] ⊻ (crc >> 8)
 	end
 	~crc
 end
