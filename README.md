@@ -7,6 +7,10 @@ See http://en.wikipedia.org/wiki/Cyclic_redundancy_check for more information.
 - [CRC.jl](https://github.com/andrewcooke/CRC.jl) -- written in pure Julia, supports many CRC variants
 - [CRC32c standard library](https://docs.julialang.org/en/v1/stdlib/CRC32c/) -- highly optimized implementation of the closely related CRC-32c checksum
 
+That being said, this package demonstrates a minimal, simple
+implementation of CRC32 in pure Julia code, which may be of
+educational interest.
+
 ## Usage
 
 ```julia
